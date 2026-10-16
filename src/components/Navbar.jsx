@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
       <div
-        className={`mx-auto flex h-16 max-w-7xl items-center justify-between rounded-full border px-4 transition-all duration-300 sm:h-[68px] sm:px-5 ${
+        className={`mx-auto flex h-16 max-w-7xl items-center justify-between rounded-full border px-4 relative z-50 transition-all duration-300 sm:h-[68px] sm:px-5 ${
           scrolled || open
             ? "glass border-white/10 shadow-2xl shadow-black/40"
             : "border-white/5 bg-charcoal-950/40 backdrop-blur-sm"
@@ -102,7 +102,7 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       <div
-        className={`fixed inset-0 top-0 z-40 origin-top bg-charcoal-950/98 px-5 pb-10 pt-24 transition-all duration-300 lg:hidden ${
+        className={`fixed inset-0 top-0 z-40 origin-top bg-charcoal-950/98 px-5 pb-10 pt-24 overflow-y-auto overscroll-contain transition-all duration-300 lg:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >

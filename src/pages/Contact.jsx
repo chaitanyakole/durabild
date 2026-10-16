@@ -241,7 +241,7 @@ export default function Contact() {
 }
 
 const inputClass =
-  "w-full rounded-2xl border border-white/10 bg-charcoal-950 px-4 py-3 text-sm text-white placeholder-charcoal-500 outline-none transition-colors focus:border-brand-500";
+  "w-full rounded-2xl border border-white/10 bg-charcoal-950 px-4 py-3 text-base text-white placeholder-charcoal-500 outline-none transition-colors focus:border-brand-500";
 
 function Field({ label, required, children }) {
   return (

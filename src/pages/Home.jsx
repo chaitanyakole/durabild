@@ -36,7 +36,7 @@ function Hero() {
             RMC · Materials · Equipment · Pune
           </span>
 
-          <h1 className="mt-6 font-display text-[2.6rem] font-bold uppercase leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="mt-6 font-display text-4xl font-bold uppercase leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl">
             Concrete that
             <br />
             <span className="text-gradient">holds the line.</span>
@@ -69,11 +69,14 @@ function Hero() {
           <Reveal>
             <Figure
               scene="hero"
+              eager
               className="aspect-[4/3] w-full shadow-2xl shadow-black/50 lg:aspect-[5/4]"
             />
           </Reveal>
 
-          <div className="absolute -bottom-6 left-4 right-4 rounded-3xl border border-white/10 bg-charcoal-900/80 p-5 backdrop-blur-xl sm:left-auto sm:right-6 sm:w-80 animate-float">
+          <div
+            className={`relative left-4 right-4 mt-6 rounded-3xl border border-white/10 bg-charcoal-900/80 p-5 backdrop-blur-xl lg:absolute lg:-bottom-6 lg:left-4 lg:right-4 lg:animate-float`}
+          >
             <div className="grid grid-cols-2 gap-4">
               {stats.slice(0, 4).map((s) => (
                 <div key={s.label}>
@@ -87,7 +90,7 @@ function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }
 
@@ -103,7 +106,7 @@ function Marquee() {
     "In-House Lab Testing",
   ];
   return (
-    <div className="border-y border-white/5 bg-charcoal-900/50 py-4">
+    <div className="border-y border-white/5 bg-charcoal-900/50 py-4 overflow-x-hidden">
       <div className="flex w-max animate-marquee gap-10 pr-10">
         {[...items, ...items].map((item, i) => (
           <span key={i} className="flex items-center gap-3 whitespace-nowrap text-sm font-medium uppercase tracking-wider text-charcoal-400">

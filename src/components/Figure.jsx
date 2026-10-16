@@ -14,6 +14,7 @@ export default function Figure({
   className = "",
   overlay = true,
   rounded = "rounded-3xl",
+  eager = false,
 }) {
   const [failed, setFailed] = useState(false);
   const resolved = src || images[scene];
@@ -25,7 +26,9 @@ export default function Figure({
         <img
           src={resolved}
           alt={alt}
-          loading="lazy"
+          loading={eager ? "eager" : "lazy"}
+          fetchpriority={eager ? "high" : "auto"}
+          decoding="async"
           onError={() => setFailed(true)}
           className="h-full w-full object-cover"
         />
