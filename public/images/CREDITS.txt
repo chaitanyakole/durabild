@@ -1,0 +1,22 @@
+Photography credits
+===================
+
+Hero + product/project images sourced from Wikimedia Commons and Unsplash
+(free licences). If you replace these with AI-generated images, delete this file.
+
+hero.jpg       Unsplash — photo-1541888946425-d81bb19240f5 (construction site)
+rmc.jpg        Commons — "2020s Peterbilt 567 tri-axle concrete mixer truck of Gotham Ready Mix.jpg"
+mixer.jpg      Commons — "Mitsubishi Fuso Super Great Transit Mixer Truck 2021.jpg"
+plant.jpg      Commons — "MOBILE CONCRETE BATCHING PLANTS mekaglobal (4).jpg"
+aggregates.jpg Commons — "Essroc cement silos, and a huge pile of dirt, on the Keating Channel -- 2014 01 01.jpg"
+cement.jpg     Commons — "Betonárka, ulice Frantiska Divise.jpg"
+blocks.jpg     Commons — "-2021-01-22 Cavity wall construction, Trimingham, Norfolk (5).JPG"
+steel.jpg      Commons — "Buger Brücke Neubau Armierungseisen HRS-20240310-RM-151311.jpg"
+admixtures.jpg Commons — "Barrels filled with sealants.jpg"
+pump.jpg       Commons — "Dornbirn-mobile concrete pump-concrete mixer truck-01ASD.jpg"
+lab.jpg        Commons — "Concrete test device.jpg"
+pour.jpg       Commons — "-2021-01-18 Foundations and concrete oversite, Trimingham, Norfolk (3).JPG"
+building.jpg   Commons — "Apartment in under construction, South Khulshi (01).jpg"
+
+Note: verify the licence (CC BY / CC BY-SA / public domain) for each file on
+commons.wikimedia.org before commercial use, and keep the required attribution.

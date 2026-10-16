@@ -68,7 +68,7 @@ function Hero() {
         <div className="relative mt-12 lg:col-span-6 lg:mt-0">
           <Reveal>
             <Figure
-              scene="skyline"
+              scene="hero"
               className="aspect-[4/3] w-full shadow-2xl shadow-black/50 lg:aspect-[5/4]"
             />
           </Reveal>

@@ -21,13 +21,31 @@ export const company = {
 
 export const locations = ["Hadapsar", "Katraj", "Baner", "Shewalewadi"];
 
+// Photography for each scene. Swap these paths for AI-generated images
+// (e.g. "/images/my-rmc-plant.png") and every Figure updates automatically.
+export const images = {
+  hero: "/images/hero.jpg",
+  rmc: "/images/rmc.jpg",
+  mixer: "/images/mixer.jpg",
+  plant: "/images/plant.jpg",
+  aggregates: "/images/aggregates.jpg",
+  cement: "/images/cement.jpg",
+  blocks: "/images/blocks.jpg",
+  steel: "/images/steel.jpg",
+  admixtures: "/images/admixtures.jpg",
+  pump: "/images/pump.jpg",
+  lab: "/images/lab.jpg",
+  pour: "/images/pour.jpg",
+  building: "/images/building.jpg",
+};
+
 export const services = [
   {
     id: "rmc",
     title: "RMC Manufacturing",
     text: "Plant-controlled ready-mixed concrete batched to your design mix and delivered to site.",
     icon: "truck",
-    scene: "mixer",
+    scene: "pour",
   },
   {
     id: "materials",
@@ -93,7 +111,7 @@ export const products = [
       "Retarder, accelerator and plasticiser admixtures on request",
     ],
     icon: "truck",
-    scene: "mixer",
+    scene: "rmc",
   },
   {
     id: "aggregates",
@@ -198,7 +216,7 @@ export const projects = [
     location: "Baner, Pune",
     detail: "35,000 m³ of M40 RMC with pumped placement for a 22-storey twin tower development.",
     year: "2024",
-    scene: "skyline",
+    scene: "building",
   },
   {
     name: "Hadapsar Logistics Hub",
@@ -222,7 +240,7 @@ export const projects = [
     location: "Shewalewadi, Pune",
     detail: "Raft foundation and podium slabs delivered with continuous pour schedules and on-site pumping.",
     year: "2022",
-    scene: "mixer",
+    scene: "rmc",
   },
   {
     name: "Green Meadows Township",
@@ -238,7 +256,7 @@ export const projects = [
     location: "Pune–Solapur Road",
     detail: "Bulk OPC and RMC supply for pier, girder and deck works on a city flyover package.",
     year: "2021",
-    scene: "skyline",
+    scene: "pour",
   },
 ];
 

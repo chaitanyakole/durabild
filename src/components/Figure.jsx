@@ -1,13 +1,14 @@
 import { useState } from "react";
 import Illustration from "./Illustration.jsx";
+import { images } from "../data/site.js";
 
 /**
  * Figure — a visual with a modern frame.
- * Drop a real (AI-generated) image via `src`; if omitted or it fails to
- * load, a generated SVG illustration is shown instead.
+ * Resolves `src`, falling back to the scene's photograph, and finally to a
+ * generated SVG illustration if no photo exists or the image fails to load.
  */
 export default function Figure({
-  scene = "skyline",
+  scene = "hero",
   src,
   alt = "",
   className = "",
@@ -15,13 +16,14 @@ export default function Figure({
   rounded = "rounded-3xl",
 }) {
   const [failed, setFailed] = useState(false);
-  const showImage = src && !failed;
+  const resolved = src || images[scene];
+  const showImage = resolved && !failed;
 
   return (
     <div className={`relative overflow-hidden ${rounded} ${className}`}>
       {showImage ? (
         <img
-          src={src}
+          src={resolved}
           alt={alt}
           loading="lazy"
           onError={() => setFailed(true)}
