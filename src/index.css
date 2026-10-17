@@ -57,6 +57,27 @@
   to { background-position: 200% 0; }
 }
 
+@keyframes hazard-stripes {
+  0% { background-position: 0 0; }
+  100% { background-position: 39.6px 0; }
+}
+
+@keyframes crane-cable {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+@keyframes beacon-blink {
+  0%, 100% { opacity: 0.25; filter: drop-shadow(0 0 2px rgba(239, 68, 68, 0.4)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 8px rgba(239, 68, 68, 1)); }
+}
+
+@keyframes laser-sweep {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 0.6; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -114,6 +135,35 @@ body {
 
 @utility card-hover {
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+@utility bg-hazard-stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #f97316,
+    #f97316 14px,
+    #16181b 14px,
+    #16181b 28px
+  );
+  background-size: 39.6px 100%;
+  animation: hazard-stripes 1.2s linear infinite;
+}
+
+@utility bg-hazard-subtle {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(249, 115, 22, 0.2),
+    rgba(249, 115, 22, 0.2) 10px,
+    rgba(22, 24, 27, 0.4) 10px,
+    rgba(22, 24, 27, 0.4) 20px
+  );
+}
+
+@utility blueprint-grid {
+  background-image:
+    linear-gradient(to right, rgba(249, 115, 22, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(249, 115, 22, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
 @media (prefers-reduced-motion: reduce) {

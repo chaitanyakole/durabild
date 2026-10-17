@@ -2,9 +2,12 @@ import { Link } from "react-router-dom";
 import { company, navLinks, products } from "../data/site.js";
 import Logo from "./Logo.jsx";
 import { Icon } from "./Icon.jsx";
+import { useLoader } from "../context/useLoader.js";
+
+const CURRENT_YEAR = new Date().getFullYear();
 
 export default function Footer() {
-  const year = new Date().getFullYear();
+  const { triggerLoader } = useLoader();
   return (
     <footer className="relative overflow-hidden border-t border-white/5 bg-charcoal-950">
       <div className="pointer-events-none absolute -left-32 -top-32 h-72 w-72 rounded-full bg-brand-500/10 blur-3xl" />
@@ -97,11 +100,25 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-2 border-t border-white/5 pt-6 text-xs text-charcoal-400 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-4 border-t border-white/5 pt-6 text-xs text-charcoal-400 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {company.name}. All rights reserved.
+            © {CURRENT_YEAR} {company.name}. All rights reserved.
           </p>
-          <p>Serving Hadapsar · Katraj · Baner · Shewalewadi · Pune, Maharashtra</p>
+          <div className="flex flex-wrap items-center gap-4">
+            <p>Serving Hadapsar · Katraj · Baner · Shewalewadi · Pune</p>
+            <button
+              type="button"
+              onClick={triggerLoader}
+              className="inline-flex items-center gap-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-brand-400 transition-colors hover:border-brand-500 hover:bg-brand-500 hover:text-charcoal-950"
+              title="Showcase the construction loader animation"
+            >
+              <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M4 19V9l8-4 8 4v10" />
+                <path d="M9 19v-6h6v6" />
+              </svg>
+              Replay Loader
+            </button>
+          </div>
         </div>
       </div>
     </footer>

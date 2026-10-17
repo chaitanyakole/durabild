@@ -3,6 +3,7 @@ import { company, locations, products } from "../data/site.js";
 import { Icon } from "../components/Icon.jsx";
 import PageHero from "../components/PageHero.jsx";
 import Reveal from "../components/Reveal.jsx";
+import ConstructionLoader from "../components/ConstructionLoader.jsx";
 
 const initialForm = {
   name: "",
@@ -17,13 +18,18 @@ const initialForm = {
 
 export default function Contact() {
   const [form, setForm] = useState(initialForm);
+  const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const update = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setTimeout(() => {
+      setSubmitting(false);
+      setSubmitted(true);
+    }, 1400);
   };
 
   const mapQuery = encodeURIComponent(
@@ -119,7 +125,14 @@ export default function Contact() {
 
           <div className="lg:col-span-7">
             <div className="rounded-4xl border border-white/8 bg-charcoal-900/60 p-6 sm:p-10">
-              {submitted ? (
+              {submitting ? (
+                <div className="py-16">
+                  <ConstructionLoader
+                    variant="inline"
+                    text="Transmitting site pour specifications & mix design..."
+                  />
+                </div>
+              ) : submitted ? (
                 <Reveal>
                   <div className="flex flex-col items-start py-10">
                     <span className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-500 text-charcoal-950">

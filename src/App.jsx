@@ -1,4 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
+import { LoaderProvider } from './context/LoaderContext.jsx'
+import ConstructionLoader from './components/ConstructionLoader.jsx'
+import PageTransitionLoader from './components/PageTransitionLoader.jsx'
 import Layout from './components/Layout.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import Home from './pages/Home.jsx'
@@ -11,7 +14,9 @@ import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
   return (
-    <>
+    <LoaderProvider>
+      <ConstructionLoader />
+      <PageTransitionLoader />
       <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
@@ -24,6 +29,6 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-    </>
+    </LoaderProvider>
   )
 }
