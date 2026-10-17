@@ -58,7 +58,7 @@ export default function About() {
 
           <div className="lg:col-span-5">
             <Reveal>
-              <Figure scene="plant" className="aspect-[4/3] w-full shadow-2xl shadow-black/40" />
+              <Figure scene="plant" eager className="aspect-[4/3] w-full shadow-2xl shadow-black/40" />
             </Reveal>
             <div className="mt-6 grid gap-6">
               <div className="rounded-4xl border border-white/8 bg-charcoal-900/60 p-7">

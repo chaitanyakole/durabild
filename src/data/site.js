@@ -24,19 +24,19 @@ export const locations = ["Hadapsar", "Katraj", "Baner", "Shewalewadi"];
 // Photography for each scene. Swap these paths for AI-generated images
 // (e.g. "/images/my-rmc-plant.png") and every Figure updates automatically.
 export const images = {
-  hero: "/images/hero.jpg",
-  rmc: "/images/rmc.jpg",
-  mixer: "/images/mixer.jpg",
-  plant: "/images/plant.jpg",
-  aggregates: "/images/aggregates.jpg",
-  cement: "/images/cement.jpg",
-  blocks: "/images/blocks.jpg",
-  steel: "/images/steel.jpg",
-  admixtures: "/images/admixtures.jpg",
-  pump: "/images/pump.jpg",
-  lab: "/images/lab.jpg",
-  pour: "/images/pour.jpg",
-  building: "/images/building.jpg",
+  hero: "/images/hero.webp",
+  rmc: "/images/rmc.webp",
+  mixer: "/images/mixer.webp",
+  plant: "/images/plant.webp",
+  aggregates: "/images/aggregates.webp",
+  cement: "/images/cement.webp",
+  blocks: "/images/blocks.webp",
+  steel: "/images/steel.webp",
+  admixtures: "/images/admixtures.webp",
+  pump: "/images/pump.webp",
+  lab: "/images/lab.webp",
+  pour: "/images/pour.webp",
+  building: "/images/building.webp",
 };
 
 export const services = [

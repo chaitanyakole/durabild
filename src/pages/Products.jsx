@@ -23,6 +23,7 @@ export default function Products() {
                 <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                   <Figure
                     scene={p.scene}
+                    eager={i === 0}
                     className="aspect-[4/3] w-full shadow-2xl shadow-black/40"
                     overlay={false}
                   />

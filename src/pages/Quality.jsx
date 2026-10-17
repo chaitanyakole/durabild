@@ -38,7 +38,7 @@ export default function Quality() {
             </div>
             <div className="lg:col-span-7">
               <Reveal>
-                <Figure scene="lab" className="aspect-[16/10] w-full shadow-2xl shadow-black/40" />
+                <Figure scene="lab" eager className="aspect-[16/10] w-full shadow-2xl shadow-black/40" />
               </Reveal>
             </div>
           </div>

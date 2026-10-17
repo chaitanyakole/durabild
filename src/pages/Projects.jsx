@@ -32,7 +32,7 @@ export default function Projects() {
             {projects.map((p, i) => (
               <Reveal key={p.name} delay={(i % 3) * 90}>
                 <article className="card-hover group h-full overflow-hidden rounded-4xl border border-white/8 bg-charcoal-900/60 hover:-translate-y-1 hover:border-brand-500/40">
-                  <Figure scene={p.scene} className="aspect-[16/10] w-full" rounded="rounded-none" />
+                  <Figure scene={p.scene} eager={i < 3} className="aspect-[16/10] w-full" rounded="rounded-none" />
                   <div className="p-6">
                     <div className="flex items-center justify-between">
                       <span className="rounded-full bg-brand-500/10 px-3 py-1 font-display text-xs uppercase tracking-[0.2em] text-brand-400">
